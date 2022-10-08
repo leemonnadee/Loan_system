@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Loan_system.exe" version="1.0.0.6" publicKeyToken="215a213dcd3f473c" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="taxi-891.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Loan_system" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Loan_system.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ComponentFactory.Krypton.Docking.dll" size="338432">
+      <assemblyIdentity name="ComponentFactory.Krypton.Docking" version="4.6.0.0" publicKeyToken="A87E673E9ECB6E8E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>DAH7JSJRMeW0kP/HSKMEYilIT0+jgZ3LbaVf+pdbgw4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ComponentFactory.Krypton.Navigator.dll" size="547840">
+      <assemblyIdentity name="ComponentFactory.Krypton.Navigator" version="4.6.0.0" publicKeyToken="A87E673E9ECB6E8E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>+kklBYXX0fRNFohXH53wIOVbkmY9npRVfuHyKOvygLc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ComponentFactory.Krypton.Ribbon.dll" size="1209856">
+      <assemblyIdentity name="ComponentFactory.Krypton.Ribbon" version="4.6.0.0" publicKeyToken="A87E673E9ECB6E8E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>FX0b61gxdxkB8toPSKDqM8FChzCIBkmxem1mWrKgvdc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ComponentFactory.Krypton.Toolkit.dll" size="2965504">
+      <assemblyIdentity name="ComponentFactory.Krypton.Toolkit" version="4.6.0.0" publicKeyToken="A87E673E9ECB6E8E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>jGn13xELwaYb3D2HVOv9P0nZ2ZW53RKazK+INxznHjA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ComponentFactory.Krypton.Workspace.dll" size="288768">
+      <assemblyIdentity name="ComponentFactory.Krypton.Workspace" version="4.6.0.0" publicKeyToken="A87E673E9ECB6E8E" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>aZWqrV3O0GWeLdix48Y6Rs18hnVE8n3jF3JSyk2fptw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Loan_system.exe" size="3349960">
+      <assemblyIdentity name="Loan_system" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>XvO4K7EDFTLZV1UERPIc5hi29h3UInbKS+2Qgt3+r10=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.DLL" size="766464">
+      <assemblyIdentity name="MySql.Data" version="8.0.17.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>SmJOuO/8VU76YyJYVBywRnRy+3aX+dka7aastpwKRek=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Renci.SshNet.dll" size="804352">
+      <assemblyIdentity name="Renci.SshNet" version="2020.0.2.0" publicKeyToken="1CEE9F8BDE3DB106" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>9qS+KnYv/VofjUfA3rNMMBXUeb1AnQHMlvHS0L5VyqI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Renci.SshNet.Async.dll" size="7680">
+      <assemblyIdentity name="Renci.SshNet.Async" version="1.4.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>HoAXhqEkBHzoPDwfVFBTEr2sieL0sJ1xi10DFQIx0ZM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Loan_system.exe.config" size="545">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aMzSrScF+uzoZUJ/K72cqk2ke9Kt/8BdGTD55GP57vI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="taxi-891.ico" size="188598">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wpkd+gLGvpEkGdkb9/XLITqacxPlWwmjDyn+MtARjiE=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=LAPTOP-NI-RUDI\RL" issuerKeyHash="615f8ebdae9fae4a6ef7fd220cfe24c95291296e" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>S8uMC/hc0DaE/fEx6kRnouaozK79XlYrHKNZpwelFT4=</DigestValue></Reference></SignedInfo><SignatureValue>qcOhH+zzP5QuUcVmVYD5rQ6qc6or4q9oRapzzSyis+5NtSli9gtcoOifqzvT43dx80RgCUTGLqjjZWTWTeY0hOoP+bturMnUDywUpCyv3Zl5SEFiPHzJrLhPMEXT1FPyJ+ABNklsl/OT/xJJDh0vEjKJ6BF9O4r0u9Vd3fPZZ0A=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>uGdJl5Bwym2HS59cCItQUhAYNbZj4+6aJ5kQUshL3J8u4y1thbcW4Sd874eZULrAkw15UV+ORCOKoJz1/bJlI9pjMIGVTEvUE4tXO4uMoBHKNxWRWELIa7y0/KZJyP3h0Y9ESWGPL8iSspRTRdF6G1V174EExztwxAK/Psu1kwE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="3e15a507a759a31c2b565efdaecca8e6a26744ea31f1fd8436d05cf80b8ccb4b" Description="" Url=""><as:assemblyIdentity name="Loan_system.exe" version="1.0.0.6" publicKeyToken="215a213dcd3f473c" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=LAPTOP-NI-RUDI\RL</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>B4NamoBdxgwhEPiWubhU3KYSqSCgTPBOtbfLoGMy/8I=</DigestValue></Reference></SignedInfo><SignatureValue>jSKJAOTU80q3wxWmftRJlzKLtLzVut9FfN1YgtQRS3TOtYlycfK/d4uM7I0+mDIWOSlJJEwo48rxLds2KLNdotUElHztdnAn70I3Pau0ZYRos0G/K/zQUOMPmh3sYfU/KqEjyMunHyXVNraak4qOrVnZU8r1MXpTwctYiNGtsxI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>uGdJl5Bwym2HS59cCItQUhAYNbZj4+6aJ5kQUshL3J8u4y1thbcW4Sd874eZULrAkw15UV+ORCOKoJz1/bJlI9pjMIGVTEvUE4tXO4uMoBHKNxWRWELIa7y0/KZJyP3h0Y9ESWGPL8iSspRTRdF6G1V174EExztwxAK/Psu1kwE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB3TCCAUagAwIBAgIQazvE2XjfCJBBRhX6Lxsb2TANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDHiIATABBAFAAVABPAFAALQBOAEkALQBSAFUARABJAFwAUgBMMB4XDTIyMDkyODAwMDExM1oXDTIzMDkyODA2MDExM1owLTErMCkGA1UEAx4iAEwAQQBQAFQATwBQAC0ATgBJAC0AUgBVAEQASQBcAFIATDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAuGdJl5Bwym2HS59cCItQUhAYNbZj4+6aJ5kQUshL3J8u4y1thbcW4Sd874eZULrAkw15UV+ORCOKoJz1/bJlI9pjMIGVTEvUE4tXO4uMoBHKNxWRWELIa7y0/KZJyP3h0Y9ESWGPL8iSspRTRdF6G1V174EExztwxAK/Psu1kwECAwEAATANBgkqhkiG9w0BAQsFAAOBgQBoD2ClqYOe7LUtswIanveZYGvvBrWyOcuFfQKKF4XYWQGDicrhzcwIw5LrjohF2XPk7a7hXkAbl4YD7yQRGhRQnjrHgfpeAhqhc7akzcXk67SdHOuNpi3pPPh8RDgD8/dXzKBZy5yVrdh32AlWWFpFJ/gl1OKal+PVWVTaDd0OUg==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
