@@ -15,6 +15,7 @@ namespace Loan_system.Admin_Module
 {
     public partial class admin_dashboard : Form
     {
+        string uName = Loginform.name;
         public admin_dashboard()
         {
             InitializeComponent();
@@ -134,6 +135,7 @@ namespace Loan_system.Admin_Module
             container.Controls.Clear();
             container.Controls.Add(amr);
             amr.Show();
+            
 
         }
     }

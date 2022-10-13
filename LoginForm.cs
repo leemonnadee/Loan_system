@@ -12,7 +12,9 @@ using System.Windows.Forms;
 namespace Loan_system
 {
     public partial class Loginform : Form
+        
     {
+        public static string name;
         string mycon = connection.ipconnection;
         public Loginform()
         {
@@ -68,6 +70,8 @@ namespace Loan_system
                 if (myreader1.Read())
                 {
                     string role = myreader1.GetString("role");
+                    name = myreader1.GetString("name");
+
                     if (role.Contains("Admin"))
                     {
                         Admin_Module.admin_dashboard ad = new Admin_Module.admin_dashboard();
@@ -76,8 +80,10 @@ namespace Loan_system
                     }
                     else if(role.Contains("Employee")){
                         Employee_Module.emplyee_dashboard eme = new Employee_Module.emplyee_dashboard();
+
                         eme.Show();
                         this.Hide();
+                    
                     }
 
 

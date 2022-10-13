@@ -187,7 +187,7 @@
             this.txt_srch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_srch.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_srch.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_srch.Location = new System.Drawing.Point(742, 344);
+            this.txt_srch.Location = new System.Drawing.Point(742, 348);
             this.txt_srch.Margin = new System.Windows.Forms.Padding(13, 4, 4, 4);
             this.txt_srch.Name = "txt_srch";
             this.txt_srch.Size = new System.Drawing.Size(297, 38);
@@ -204,7 +204,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 75;
             this.pictureBox3.TabStop = false;
-           // 
+            // 
             // label2
             // 
             this.label2.AutoSize = true;

@@ -16,7 +16,7 @@ namespace Loan_system.Employee_Module
     public partial class Daily_payment : Form
     {
         public string mycon = connection.ipconnection;
-
+        string uName = Loginform.name;
         public Daily_payment()
         {
             InitializeComponent();
@@ -93,8 +93,8 @@ namespace Loan_system.Employee_Module
         public void dailyPayment() {
             try
             {
-                string query = "INSERT INTO `transactions`(`recipt_no`, `client_id`, `amount`, `payment_date`) " +
-                    "VALUES ('','" + this.lbl_id.Text + "','" + this.txt_amount.Text + "','" + this.txt_date.Text + "')";
+                string query = "INSERT INTO `transactions`(`recipt_no`, `client_id`, `amount`, `payment_date`,`added_by`) " +
+                    "VALUES ('','" + this.lbl_id.Text + "','" + this.txt_amount.Text + "','" + this.txt_date.Text + "','"+filter(uName)+"')";
 
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
@@ -273,6 +273,7 @@ namespace Loan_system.Employee_Module
             }
                 private void Daily_payment_Load(object sender, EventArgs e)
         {
+        
             DataPanel.Visible=false;
             this.txt_date.Value = DateTime.Now;
             lbl_idtext.Visible = false;

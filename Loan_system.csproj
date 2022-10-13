@@ -21,11 +21,12 @@
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
+    <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>3RCJ Lending Corp.</ProductName>
     <PublisherName>Roy Belleza</PublisherName>
-    <ApplicationRevision>10</ApplicationRevision>
+    <MinimumRequiredVersion>1.0.0.10</MinimumRequiredVersion>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -64,7 +65,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>taxi-891.ico</ApplicationIcon>
+    <ApplicationIcon>money.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
@@ -369,6 +373,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\export_pdf_25px.png" />
+    <Content Include="money.ico" />
     <Content Include="taxi-891.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

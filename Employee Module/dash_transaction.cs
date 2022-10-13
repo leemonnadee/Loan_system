@@ -25,8 +25,8 @@ namespace Loan_system.Employee_Module
             try
             {
 
-                string query = "SELECT transactions.recipt_no AS 'Recipt No.',client.name AS 'Client Name',transactions.amount AS'Amount Paid',transactions.payment_date AS 'Day of Payment' from transactions INNER JOIN client ON transactions.client_id=client.client_id " +
-                    "WHERE client.name  LIKE '%"+textBox1.Text+"%' ORDER BY payment_date DESC ;";
+                string query = "SELECT transactions.recipt_no AS 'Recipt No.',client.name AS 'Client Name',transactions.amount AS'Amount Paid',transactions.payment_date AS 'Day of Payment',transactions.added_by AS 'Added By' from transactions INNER JOIN client ON transactions.client_id=client.client_id " +
+                    "where  concat(client.name,transactions.added_by,transactions.recipt_no)  LIKE '%" + textBox1.Text+"%' ORDER BY payment_date DESC ;";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
 
@@ -74,7 +74,7 @@ namespace Loan_system.Employee_Module
             {
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "PDF (*.pdf)|*.pdf";
-                sfd.FileName = "Daily-Report.pdf";
+                sfd.FileName = "transaction-Report.pdf";
                 bool fileError = false;
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {

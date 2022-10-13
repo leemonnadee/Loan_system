@@ -12,6 +12,7 @@ namespace Loan_system.Employee_Module
 {
     public partial class emplyee_dashboard : Form
     {
+        string employeeName = Loginform.name;
         public emplyee_dashboard()
         {
             InitializeComponent();
@@ -109,6 +110,8 @@ namespace Loan_system.Employee_Module
 
         private void emplyee_dashboard_Load(object sender, EventArgs e)
         {
+          
+       
             btn_dashboard.BackColor = Color.FromArgb(199, 119, 119);
             btn_create.BackColor = Color.Transparent;
             btn_dailyReport.BackColor = Color.Transparent;
@@ -123,6 +126,7 @@ namespace Loan_system.Employee_Module
             container.Controls.Clear();
             container.Controls.Add(acc);
             acc.Show();
+
         }
     }
 }

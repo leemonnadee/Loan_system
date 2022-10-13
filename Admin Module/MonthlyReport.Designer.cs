@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_monthly = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +43,7 @@
             this.lbl_InterestRate = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_pay = new System.Windows.Forms.Button();
             this.refresh = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.lbl_editableExpenses = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_pay = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -200,6 +200,26 @@
             this.panel4.Size = new System.Drawing.Size(746, 485);
             this.panel4.TabIndex = 40;
             // 
+            // btn_pay
+            // 
+            this.btn_pay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
+            this.btn_pay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_pay.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btn_pay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_pay.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pay.ForeColor = System.Drawing.Color.White;
+            this.btn_pay.Image = global::Loan_system.Properties.Resources.export_pdf_25px;
+            this.btn_pay.Location = new System.Drawing.Point(29, 67);
+            this.btn_pay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_pay.Name = "btn_pay";
+            this.btn_pay.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.btn_pay.Size = new System.Drawing.Size(144, 58);
+            this.btn_pay.TabIndex = 62;
+            this.btn_pay.Text = "Export";
+            this.btn_pay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_pay.UseVisualStyleBackColor = false;
+            this.btn_pay.Click += new System.EventHandler(this.btn_pay_Click);
+            // 
             // refresh
             // 
             this.refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
@@ -212,7 +232,7 @@
             this.refresh.Location = new System.Drawing.Point(179, 67);
             this.refresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(144, 41);
+            this.refresh.Size = new System.Drawing.Size(144, 58);
             this.refresh.TabIndex = 61;
             this.refresh.Text = "Refresh";
             this.refresh.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -266,12 +286,12 @@
             this.dtable.AllowUserToAddRows = false;
             this.dtable.AllowUserToResizeColumns = false;
             this.dtable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.dtable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dtable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -280,45 +300,45 @@
             this.dtable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtable.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtable.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtable.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtable.EnableHeadersVisualStyles = false;
             this.dtable.GridColor = System.Drawing.Color.White;
-            this.dtable.Location = new System.Drawing.Point(3, 129);
+            this.dtable.Location = new System.Drawing.Point(3, 147);
             this.dtable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtable.MultiSelect = false;
             this.dtable.Name = "dtable";
             this.dtable.ReadOnly = true;
             this.dtable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtable.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtable.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtable.RowHeadersVisible = false;
             this.dtable.RowHeadersWidth = 51;
             this.dtable.RowTemplate.DividerHeight = 1;
             this.dtable.RowTemplate.Height = 50;
             this.dtable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtable.Size = new System.Drawing.Size(740, 354);
+            this.dtable.Size = new System.Drawing.Size(740, 336);
             this.dtable.TabIndex = 57;
             // 
             // button1
@@ -402,26 +422,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_pay
-            // 
-            this.btn_pay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(125)))), ((int)(((byte)(80)))));
-            this.btn_pay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_pay.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btn_pay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pay.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pay.ForeColor = System.Drawing.Color.White;
-            this.btn_pay.Image = global::Loan_system.Properties.Resources.export_pdf_25px;
-            this.btn_pay.Location = new System.Drawing.Point(29, 67);
-            this.btn_pay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_pay.Name = "btn_pay";
-            this.btn_pay.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.btn_pay.Size = new System.Drawing.Size(144, 41);
-            this.btn_pay.TabIndex = 62;
-            this.btn_pay.Text = "Export";
-            this.btn_pay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_pay.UseVisualStyleBackColor = false;
-            this.btn_pay.Click += new System.EventHandler(this.btn_pay_Click);
             // 
             // MonthlyReport
             // 

@@ -208,7 +208,7 @@ namespace Loan_system.Admin_Module
             {
                 SaveFileDialog sfd = new SaveFileDialog();
                 sfd.Filter = "PDF (*.pdf)|*.pdf";
-                sfd.FileName = "Daily-Report.pdf";
+                sfd.FileName = "Expenses-Report.pdf";
                 bool fileError = false;
                 if (sfd.ShowDialog() == DialogResult.OK)
                 {

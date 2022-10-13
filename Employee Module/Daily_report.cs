@@ -18,6 +18,7 @@ namespace Loan_system.Employee_Module
     public partial class Daily_report : Form
     {
         public string mycon = connection.ipconnection;
+        string uName = Loginform.name;
         public Daily_report()
         {
             InitializeComponent();
@@ -85,7 +86,7 @@ namespace Loan_system.Employee_Module
                 try
                 {
 
-                    string query = "SELECT transactions.recipt_no as 'Recipt No.',client.name,client.daily_payment as 'Unpaid amount',transactions.payment_date as 'Date of Payment' FROM `transactions` INNER JOIN client ON transactions.client_id=client.client_id WHERE payment_date=CURRENT_DATE and amount=0";
+                    string query = "SELECT transactions.recipt_no as 'Recipt No.',client.name as 'Clients',client.daily_payment as 'Unpaid amount',transactions.payment_date as 'Date of Payment',transactions.added_by as 'Added by' FROM `transactions` INNER JOIN client ON transactions.client_id=client.client_id WHERE payment_date=CURRENT_DATE and amount=0";
 
                     MySqlConnection conn = new MySqlConnection(mycon);
                     MySqlCommand mycommand = new MySqlCommand(query, conn);
@@ -128,7 +129,7 @@ namespace Loan_system.Employee_Module
             try
             {
 
-                string query = "SELECT transactions.recipt_no as 'Recipt No.',client.name,transactions.amount ,transactions.payment_date as 'Date of Payment' FROM `transactions` INNER JOIN client ON transactions.client_id=client.client_id WHERE payment_date=CURRENT_DATE and amount>0";
+                string query = "SELECT transactions.recipt_no as 'Recipt No.',client.name as 'Clients',transactions.amount ,transactions.payment_date as 'Date of Payment',transactions.added_by as 'Added by' FROM `transactions` INNER JOIN client ON transactions.client_id=client.client_id WHERE payment_date=CURRENT_DATE and amount>0";
 
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
@@ -252,14 +253,18 @@ getDataTable();
                               
 
                                 Paragraph legend = new Paragraph();
-                                legend.Alignment = Element.ALIGN_RIGHT;
+                             
                                 legend.Font = FontFactory.GetFont("Arial", 12);
-                                legend.Add("\n"+comboBox1.Text+"Record\n\n");
 
+                                legend.Add("\n"+comboBox1.Text+"Record");
+                                legend.Alignment = Element.ALIGN_LEFT;
+                                legend.Add("\n Printed by: " + uName + "\n\n");
+
+                           
                                 pdfDoc.Open();
                                 pdfDoc.Add(title);
                                 pdfDoc.Add(legend);
-                              
+                               
                                 pdfDoc.Add(pdfTable);
                                 pdfDoc.Close();
                                 stream.Close();

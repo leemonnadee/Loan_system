@@ -20,6 +20,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Loginform));
             this.uName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.uPass = new System.Windows.Forms.TextBox();
@@ -210,6 +211,7 @@
             this.Controls.Add(this.uName);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Loginform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

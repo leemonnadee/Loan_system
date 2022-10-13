@@ -28,8 +28,7 @@ namespace Loan_system.Admin_Module
             try
             {
 
-                string query = "SELECT client.client_id,client.name AS 'Client Name',client.contact AS 'Contact No.',client.total_payment AS 'Total Loan',client.Legend AS 'Paid/Unpaid',SUM(transactions.amount) AS 'Balance 'FROM `client` INNER JOIN transactions ON client.client_id=transactions.client_id where client.name  LIKE '%" + txt_srch.Text + "%' and client.legend='"+comboBox1.Text+"'GROUP BY transactions.client_id;";
-
+                string query = "SELECT client.client_id,client.name AS 'Client Name',client.contact AS 'Contact No.',client.total_payment AS 'Total Loan',client.Legend AS 'Paid/Unpaid',SUM(transactions.amount) AS 'Balance 'FROM `client` INNER JOIN transactions ON client.client_id=transactions.client_id where concat(client.name,client.client_id,client.Legend)  LIKE '%" + txt_srch.Text + "%' and client.legend='" + comboBox1.Text + "'GROUP BY transactions.client_id;";
                 MySqlConnection conn = new MySqlConnection(mycon);
                 MySqlCommand mycommand = new MySqlCommand(query, conn);
 
