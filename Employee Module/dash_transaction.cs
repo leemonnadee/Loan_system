@@ -50,16 +50,34 @@ namespace Loan_system.Employee_Module
 
 
         }
-
+        public void clear() {
+            lbl_id.Text = string.Empty;
+        }
        
 
         private void dash_transaction_Load(object sender, EventArgs e)
         {
+            String s=Loginform.role;
+            if (s.Equals("Admin"))
+            {
+
+                btn_delete.Visible = true;
+                lbl_id.Visible = true;
+                lbl_reciptText.Visible = true;
+            }
+            else {
+                btn_delete.Visible = false;
+
+             
+                lbl_id.Visible = false;
+                lbl_reciptText.Visible = false;
+            }
             showTransactions();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            clear();
             showTransactions();
         }
 
@@ -70,6 +88,7 @@ namespace Loan_system.Employee_Module
 
         private void btn_pay_Click(object sender, EventArgs e)
         {
+            clear();
             if (dtable.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog();
@@ -145,6 +164,71 @@ namespace Loan_system.Employee_Module
             else
             {
                 MessageBox.Show("No Record To Export !!!", "Info");
+            }
+        }
+
+        private void dtable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dtable.Rows[e.RowIndex];
+                // lbl_idno.Text = row.Cells["user_id"].Value.ToString();
+            string recipt_no = row.Cells["Recipt No."].Value.ToString();
+                lbl_id.Text = recipt_no;
+
+            
+            }
+        }
+        void delete()
+        {
+            try
+            {
+                string query = "DELETE FROM `transactions` WHERE recipt_no='"+lbl_id.Text+"'";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+
+
+                conn.Open();
+
+
+                myreader1 = mycommand.ExecuteReader();
+                MessageBox.Show("Delete Successfully", "3RCJ LENDING System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                showTransactions();
+             
+                clear();
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
+
+
+
+        }
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            if (lbl_id.Text == string.Empty)
+            {
+
+                MessageBox.Show("Recipt No. Not Found!!", "3RCJ LENDING System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else {
+                DialogResult dialogResult = MessageBox.Show("Do you want to delete this Tranaction?", "Delete Transaction", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    delete();
+                   
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do something else
+                }
             }
         }
     }

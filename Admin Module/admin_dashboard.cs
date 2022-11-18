@@ -30,7 +30,7 @@ namespace Loan_system.Admin_Module
 
         private void btn_dashboard_Click(object sender, EventArgs e)
         {
-           
+            btn_transaction.BackColor = Color.Transparent;
             btn_dashboard.BackColor = Color.FromArgb(199, 119, 119) ;
             btn_create.BackColor=Color.Transparent;
             btn_dailyReport.BackColor = Color.Transparent; ;
@@ -51,6 +51,7 @@ namespace Loan_system.Admin_Module
         public void btn_monthly_Click(object sender, EventArgs e)
         {
             btn_monthly.BackColor = Color.FromArgb(199, 119, 119);
+            btn_transaction.BackColor = Color.Transparent;
             btn_dashboard.BackColor = Color.Transparent;
             btn_create.BackColor = Color.Transparent; ;
             btn_badRecord.BackColor = Color.Transparent; ;
@@ -64,6 +65,7 @@ namespace Loan_system.Admin_Module
 
         private void btn_create_Click(object sender, EventArgs e)
         {
+            btn_transaction.BackColor = Color.Transparent;
             btn_create.BackColor = Color.FromArgb(199, 119, 119);
             btn_dashboard.BackColor = Color.Transparent;
             btn_dailyReport.BackColor = Color.Transparent; ;
@@ -80,6 +82,7 @@ namespace Loan_system.Admin_Module
 
         private void btn_dailyReport_Click(object sender, EventArgs e)
         {
+            btn_transaction.BackColor = Color.Transparent;
             btn_dailyReport.BackColor = Color.FromArgb(199, 119, 119);
             btn_dashboard.BackColor = Color.Transparent;
             btn_create.BackColor = Color.Transparent; ;
@@ -97,6 +100,7 @@ namespace Loan_system.Admin_Module
         private void btn_badRecord_Click(object sender, EventArgs e)
         {
             btn_badRecord.BackColor = Color.FromArgb(199, 119, 119);
+            btn_transaction.BackColor = Color.Transparent;
             btn_dashboard.BackColor = Color.Transparent;
             btn_create.BackColor = Color.Transparent; ;
             btn_monthly.BackColor = Color.Transparent; ;
@@ -137,6 +141,21 @@ namespace Loan_system.Admin_Module
             amr.Show();
             
 
+        }
+
+        private void btn_transaction_Click(object sender, EventArgs e)
+        {
+            btn_transaction.BackColor = Color.FromArgb(199, 119, 119);
+            btn_badRecord.BackColor = Color.Transparent;
+            btn_dashboard.BackColor = Color.Transparent;
+            btn_create.BackColor = Color.Transparent; ;
+            btn_monthly.BackColor = Color.Transparent; ;
+            btn_monthly.BackColor = Color.Transparent;
+            Employee_Module.dash_transaction abr = new Employee_Module.dash_transaction();
+            abr.TopLevel = false;
+            container.Controls.Clear();
+            container.Controls.Add(abr);
+            abr.Show();
         }
     }
 }

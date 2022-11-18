@@ -303,14 +303,6 @@ namespace Loan_system.Admin_Module
             
         }
 
-        private void dtable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txt_contact_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
-}
+

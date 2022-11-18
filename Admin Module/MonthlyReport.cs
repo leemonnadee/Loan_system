@@ -19,36 +19,40 @@ namespace Loan_system.Admin_Module
         public String mycon = connection.ipconnection;
         public double total_expenses = 0;
         public double total_net = 0;
-        public double release=0;
-        public double collected=0;
+        public double release = 0;
+        public double collected = 0;
         public double interest = 0;
-     
+
         public MonthlyReport()
         {
             InitializeComponent();
         }
-        public void Display_Monthly() {
-            try { 
+        public void Display_Monthly()
+        {
+            try
+            {
 
-            string query = "SELECT SUM(amount) AS 'Monthly Amount' FROM `transactions` WHERE MONTH(payment_date)=Month(CURRENT_DATE) AND YEAR(payment_date)=year(CURRENT_DATE)";
-            MySqlConnection con = new MySqlConnection(mycon);
-            MySqlCommand mycommand = new MySqlCommand(query, con);
-            MySqlDataReader myreader1;
-            con.Open();
-            myreader1 = mycommand.ExecuteReader();
-            if (myreader1.Read()) {
-                        
-                    collected=double.Parse(myreader1.GetString("Monthly Amount"));
+                string query = "SELECT SUM(amount) AS 'Monthly Amount' FROM `transactions` WHERE MONTH(payment_date)=Month(CURRENT_DATE) AND YEAR(payment_date)=year(CURRENT_DATE)";
+                MySqlConnection con = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, con);
+                MySqlDataReader myreader1;
+                con.Open();
+                myreader1 = mycommand.ExecuteReader();
+                if (myreader1.Read())
+                {
+
+                    collected = double.Parse(myreader1.GetString("Monthly Amount"));
                     double toBeCollected = release - collected;
                     lbl_monthly.Text = "Php" + toBeCollected.ToString();
-            }
-            else { 
-            
-            }
+                }
+                else
+                {
+
+                }
             }
             catch (Exception ex)
             {
-               // MessageBox.Show(ex.Message);
+                // MessageBox.Show(ex.Message);
             }
         }
         public void Display_expenses()
@@ -74,64 +78,69 @@ namespace Loan_system.Admin_Module
             }
             catch (Exception ex)
             {
-               // MessageBox.Show(ex.Message);
+                // MessageBox.Show(ex.Message);
             }
         }
-        public void Display_InterestRate() {
-            try {
-            string query = "SELECT SUM(total_interest)AS total FROM `client` WHERE MONTHNAME(loan_date)=MONTHNAME(CURRENT_DATE) AND year(loan_date)=year(CURRENT_DATE)";
-            MySqlConnection con = new MySqlConnection(mycon);
-            MySqlCommand mycommand = new MySqlCommand(query, con);
-            MySqlDataReader myreader1;
-            con.Open();
-            myreader1 = mycommand.ExecuteReader();
-            if (myreader1.Read())
+        public void Display_InterestRate()
+        {
+            try
             {
-                lbl_InterestRate.Text = "Php" + myreader1.GetString("total");
+                string query = "SELECT SUM(total_interest)AS total FROM `client` WHERE MONTHNAME(loan_date)=MONTHNAME(CURRENT_DATE) AND year(loan_date)=year(CURRENT_DATE)";
+                MySqlConnection con = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, con);
+                MySqlDataReader myreader1;
+                con.Open();
+                myreader1 = mycommand.ExecuteReader();
+                if (myreader1.Read())
+                {
+                    lbl_InterestRate.Text = "Php" + myreader1.GetString("total");
                     interest = double.Parse(myreader1.GetString("total"));
-            }
-            else
-            {
+                }
+                else
+                {
 
+                }
             }
-        } catch (Exception ex) {
-               // MessageBox.Show(ex.Message);
+            catch (Exception ex)
+            {
+                // MessageBox.Show(ex.Message);
             }
-}
+        }
         public void Loan_amount()
         {
-            try { 
-            string query = "SELECT SUM(loan_amount) AS 'Loan' FROM `client` WHERE MONTHNAME(loan_date)=MONTHNAME(CURRENT_DATE) AND year(loan_date)=year(CURRENT_DATE)";
-            MySqlConnection con = new MySqlConnection(mycon);
-            MySqlCommand mycommand = new MySqlCommand(query, con);
-            MySqlDataReader myreader1;
-            con.Open();
-            myreader1 = mycommand.ExecuteReader();
-            if (myreader1.Read())
+            try
             {
-                lbl_ReleaseAmount.Text = "Php" + myreader1.GetString("loan");
+                string query = "SELECT SUM(loan_amount) AS 'Loan' FROM `client` WHERE MONTHNAME(loan_date)=MONTHNAME(CURRENT_DATE) AND year(loan_date)=year(CURRENT_DATE)";
+                MySqlConnection con = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, con);
+                MySqlDataReader myreader1;
+                con.Open();
+                myreader1 = mycommand.ExecuteReader();
+                if (myreader1.Read())
+                {
+                    lbl_ReleaseAmount.Text = "Php" + myreader1.GetString("loan");
 
-                    release= double.Parse(myreader1.GetString("loan"));
+                    release = double.Parse(myreader1.GetString("loan"));
 
                 }
                 else
-            {
+                {
 
-            }
+                }
                 con.Close();
             }
-           
+
             catch (Exception ex)
             {
                 //MessageBox.Show(ex.Message);
             }
-            
+
         }
 
 
 
 
-       public void showallData()
+        public void showallData()
         {
 
 
@@ -148,7 +157,7 @@ namespace Loan_system.Admin_Module
                 DataTable table = new DataTable();
                 dtable.DataSource = table;
                 myadapter.Fill(table);
-             
+
 
 
 
@@ -170,20 +179,24 @@ namespace Loan_system.Admin_Module
 
         private void MonthlyReport_Load(object sender, EventArgs e)
         {
+            btn_delete.Visible = false;
+    
             Loan_amount();
             Display_Monthly();
-            
+
             Display_InterestRate();
             Display_expenses();
             showallData();
-            double Net=interest - total_expenses;
-            lbl_netprofit.Text ="Php" +Net.ToString();
+            double Net = interest - total_expenses;
+            lbl_netprofit.Text = "Php" + Net.ToString();
             refresh.Visible = false;
-      
+
         }
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+            lbl_id.Text = "";
+            btn_delete.Visible = false;
             editable_expenses ee = new editable_expenses();
             ee.Show();
             refresh.Visible = true;
@@ -191,8 +204,10 @@ namespace Loan_system.Admin_Module
 
         private void refresh_Click(object sender, EventArgs e)
         {
+            lbl_id.Text = "";
+            btn_delete.Visible = false;
             showallData();
-                Loan_amount();
+            Loan_amount();
             Loan_amount();
             Display_expenses();
             double Net = interest - total_expenses;
@@ -204,6 +219,8 @@ namespace Loan_system.Admin_Module
 
         private void btn_pay_Click(object sender, EventArgs e)
         {
+            btn_delete.Visible = false;
+            lbl_id.Text = "";
             if (dtable.Rows.Count > 0)
             {
                 SaveFileDialog sfd = new SaveFileDialog();
@@ -281,6 +298,91 @@ namespace Loan_system.Admin_Module
                 MessageBox.Show("No Record To Export !!!", "Info");
             }
         }
+
+        private void dtable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                btn_delete.Visible = true;
+                DataGridViewRow row = this.dtable.Rows[e.RowIndex];
+                // lbl_idno.Text = row.Cells["user_id"].Value.ToString();
+                string expensesID = row.Cells["ID"].Value.ToString();
+                lbl_id.Text = expensesID;
+
+
+            }
+        }
+
+
+        void delete()
+        {
+            try
+            {
+                string query = "DELETE FROM `expenses` WHERE `expenses_id`='" + lbl_id.Text + "'";
+                MySqlConnection conn = new MySqlConnection(mycon);
+                MySqlCommand mycommand = new MySqlCommand(query, conn);
+
+
+
+                MySqlDataReader myreader1;
+
+
+
+                conn.Open();
+
+
+                myreader1 = mycommand.ExecuteReader();
+                MessageBox.Show("Delete Successfully", "3RCJ LENDING System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                lbl_id.Text = string.Empty;
+                showallData();
+                Loan_amount();
+ 
+                Display_expenses();
+                double Net = interest - total_expenses;
+                lbl_netprofit.Text = "Php" + Net.ToString();
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
+
+
+
+        }
+
+
+
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            if (lbl_id.Text == string.Empty)
+            {
+
+                MessageBox.Show("Recipt No. Not Found!!", "3RCJ LENDING System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Do you want to delete this Tranaction?", "Delete Transaction", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                   delete();
+                    btn_delete.Visible = false;
+
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    //do something else
+                }
+            }
+        }
     }
-    }
+}
+    
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MonthlyReport));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,19 +44,21 @@
             this.lbl_InterestRate = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.btn_pay = new System.Windows.Forms.Button();
             this.refresh = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.lbl_editableExpenses = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dtable = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbl_netprofit = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -186,19 +189,52 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.lbl_id);
+            this.panel4.Controls.Add(this.btn_delete);
             this.panel4.Controls.Add(this.btn_pay);
             this.panel4.Controls.Add(this.refresh);
             this.panel4.Controls.Add(this.btn_add);
             this.panel4.Controls.Add(this.lbl_editableExpenses);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.dtable);
-            this.panel4.Controls.Add(this.button1);
             this.panel4.Controls.Add(this.label5);
             this.panel4.ForeColor = System.Drawing.Color.Gray;
-            this.panel4.Location = new System.Drawing.Point(328, 365);
+            this.panel4.Location = new System.Drawing.Point(328, 391);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(746, 485);
+            this.panel4.Size = new System.Drawing.Size(746, 490);
             this.panel4.TabIndex = 40;
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id.Location = new System.Drawing.Point(219, 427);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(0, 31);
+            this.lbl_id.TabIndex = 64;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_delete.BackColor = System.Drawing.Color.IndianRed;
+            this.btn_delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_delete.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
+            this.btn_delete.Location = new System.Drawing.Point(583, 420);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
+            this.btn_delete.Size = new System.Drawing.Size(144, 48);
+            this.btn_delete.TabIndex = 63;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_delete.UseVisualStyleBackColor = false;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_pay
             // 
@@ -206,14 +242,14 @@
             this.btn_pay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_pay.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btn_pay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pay.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pay.Font = new System.Drawing.Font("Verdana", 12F);
             this.btn_pay.ForeColor = System.Drawing.Color.White;
             this.btn_pay.Image = global::Loan_system.Properties.Resources.export_pdf_25px;
-            this.btn_pay.Location = new System.Drawing.Point(29, 67);
+            this.btn_pay.Location = new System.Drawing.Point(17, 69);
             this.btn_pay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_pay.Name = "btn_pay";
             this.btn_pay.Padding = new System.Windows.Forms.Padding(0, 5, 0, 5);
-            this.btn_pay.Size = new System.Drawing.Size(144, 58);
+            this.btn_pay.Size = new System.Drawing.Size(144, 48);
             this.btn_pay.TabIndex = 62;
             this.btn_pay.Text = "Export";
             this.btn_pay.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -227,12 +263,12 @@
             this.refresh.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.refresh.FlatAppearance.BorderSize = 0;
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refresh.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refresh.Font = new System.Drawing.Font("Verdana", 12F);
             this.refresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(171)))), ((int)(((byte)(46)))));
-            this.refresh.Location = new System.Drawing.Point(179, 67);
+            this.refresh.Location = new System.Drawing.Point(167, 68);
             this.refresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(144, 58);
+            this.refresh.Size = new System.Drawing.Size(144, 48);
             this.refresh.TabIndex = 61;
             this.refresh.Text = "Refresh";
             this.refresh.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -263,9 +299,9 @@
             this.lbl_editableExpenses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_editableExpenses.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_editableExpenses.ForeColor = System.Drawing.Color.Gray;
-            this.lbl_editableExpenses.Location = new System.Drawing.Point(494, 67);
+            this.lbl_editableExpenses.Location = new System.Drawing.Point(511, 69);
             this.lbl_editableExpenses.Name = "lbl_editableExpenses";
-            this.lbl_editableExpenses.Size = new System.Drawing.Size(249, 41);
+            this.lbl_editableExpenses.Size = new System.Drawing.Size(216, 41);
             this.lbl_editableExpenses.TabIndex = 59;
             this.lbl_editableExpenses.Text = "00.00";
             this.lbl_editableExpenses.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -275,7 +311,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(488, 25);
+            this.label6.Location = new System.Drawing.Point(468, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 25);
             this.label6.TabIndex = 58;
@@ -319,7 +355,7 @@
             this.dtable.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtable.EnableHeadersVisualStyles = false;
             this.dtable.GridColor = System.Drawing.Color.White;
-            this.dtable.Location = new System.Drawing.Point(3, 147);
+            this.dtable.Location = new System.Drawing.Point(3, 127);
             this.dtable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtable.MultiSelect = false;
             this.dtable.Name = "dtable";
@@ -338,17 +374,9 @@
             this.dtable.RowTemplate.DividerHeight = 1;
             this.dtable.RowTemplate.Height = 50;
             this.dtable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtable.Size = new System.Drawing.Size(740, 336);
+            this.dtable.Size = new System.Drawing.Size(740, 270);
             this.dtable.TabIndex = 57;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(853, 147);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 34);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dtable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtable_CellDoubleClick);
             // 
             // label5
             // 
@@ -423,6 +451,17 @@
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(11, 428);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(201, 31);
+            this.label7.TabIndex = 65;
+            this.label7.Text = "Expenses ID:";
+            // 
             // MonthlyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -470,7 +509,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbl_monthly;
         private System.Windows.Forms.Label lbl_ReleaseAmount;
@@ -482,5 +520,8 @@
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Button refresh;
         private System.Windows.Forms.Button btn_pay;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Label label7;
     }
 }

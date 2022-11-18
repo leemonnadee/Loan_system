@@ -223,6 +223,16 @@ namespace Loan_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap history1 {
+            get {
+                object obj = ResourceManager.GetObject("history1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap list_80px {
             get {
                 object obj = ResourceManager.GetObject("list_80px", resourceCulture);
@@ -236,6 +246,16 @@ namespace Loan_system.Properties {
         internal static System.Drawing.Bitmap Logout_Rounded_40px {
             get {
                 object obj = ResourceManager.GetObject("Logout Rounded_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Order_History_40px {
+            get {
+                object obj = ResourceManager.GetObject("Order History_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -346,6 +366,16 @@ namespace Loan_system.Properties {
         internal static System.Drawing.Bitmap trans {
             get {
                 object obj = ResourceManager.GetObject("trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transaction_list_40px {
+            get {
+                object obj = ResourceManager.GetObject("transaction_list_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

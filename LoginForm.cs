@@ -16,6 +16,7 @@ namespace Loan_system
     {
         public static string name;
         string mycon = connection.ipconnection;
+        public static string role;
         public Loginform()
         {
             InitializeComponent();
@@ -69,7 +70,7 @@ namespace Loan_system
 
                 if (myreader1.Read())
                 {
-                    string role = myreader1.GetString("role");
+                     role = myreader1.GetString("role");
                     name = myreader1.GetString("name");
 
                     if (role.Contains("Admin"))

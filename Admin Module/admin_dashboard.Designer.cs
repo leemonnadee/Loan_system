@@ -31,20 +31,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin_dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.container = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btn_transaction = new System.Windows.Forms.Button();
             this.btn_dashboard = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_create = new System.Windows.Forms.Button();
             this.btn_badRecord = new System.Windows.Forms.Button();
             this.btn_monthly = new System.Windows.Forms.Button();
             this.btn_dailyReport = new System.Windows.Forms.Button();
-            this.container = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(42)))), ((int)(((byte)(43)))));
+            this.panel1.Controls.Add(this.btn_transaction);
             this.panel1.Controls.Add(this.btn_dashboard);
             this.panel1.Controls.Add(this.btn_logout);
             this.panel1.Controls.Add(this.btn_create);
@@ -57,6 +59,43 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(315, 885);
             this.panel1.TabIndex = 0;
+            // 
+            // container
+            // 
+            this.container.BackColor = System.Drawing.Color.White;
+            this.container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.container.Location = new System.Drawing.Point(315, 0);
+            this.container.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.container.Name = "container";
+            this.container.Size = new System.Drawing.Size(1136, 885);
+            this.container.TabIndex = 1;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btn_transaction
+            // 
+            this.btn_transaction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_transaction.FlatAppearance.BorderSize = 0;
+            this.btn_transaction.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_transaction.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(50)))), ((int)(((byte)(51)))));
+            this.btn_transaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(50)))), ((int)(((byte)(51)))));
+            this.btn_transaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_transaction.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_transaction.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_transaction.Image = global::Loan_system.Properties.Resources.Order_History_40px;
+            this.btn_transaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_transaction.Location = new System.Drawing.Point(2, 511);
+            this.btn_transaction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_transaction.Name = "btn_transaction";
+            this.btn_transaction.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btn_transaction.Size = new System.Drawing.Size(312, 58);
+            this.btn_transaction.TabIndex = 7;
+            this.btn_transaction.Text = "Transactions";
+            this.btn_transaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_transaction.UseVisualStyleBackColor = true;
+            this.btn_transaction.Click += new System.EventHandler(this.btn_transaction_Click);
             // 
             // btn_dashboard
             // 
@@ -136,7 +175,7 @@
             this.btn_badRecord.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_badRecord.Image = ((System.Drawing.Image)(resources.GetObject("btn_badRecord.Image")));
             this.btn_badRecord.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_badRecord.Location = new System.Drawing.Point(0, 501);
+            this.btn_badRecord.Location = new System.Drawing.Point(2, 578);
             this.btn_badRecord.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_badRecord.Name = "btn_badRecord";
             this.btn_badRecord.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
@@ -194,20 +233,6 @@
             this.btn_dailyReport.UseVisualStyleBackColor = true;
             this.btn_dailyReport.Click += new System.EventHandler(this.btn_dailyReport_Click);
             // 
-            // container
-            // 
-            this.container.BackColor = System.Drawing.Color.White;
-            this.container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container.Location = new System.Drawing.Point(315, 0);
-            this.container.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(1136, 885);
-            this.container.TabIndex = 1;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // admin_dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -240,5 +265,6 @@
         private System.Windows.Forms.Panel container;
         private System.Windows.Forms.Button btn_dashboard;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btn_transaction;
     }
 }

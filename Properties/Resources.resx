@@ -127,11 +127,17 @@
   <data name="history" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\history.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="request_money_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\request_money_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="admin_settings_male_80px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_settings_male_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logout Rounded_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logout Rounded_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="transaction_list_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\transaction_list_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coolHue-F05F57-3609401" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coolHue-F05F57-3609401.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,11 +151,17 @@
   <data name="today_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\today_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="add_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ratings_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ratings_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="today_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\today_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="export_pdf_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\export_pdf_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pay_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pay_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,8 +169,8 @@
   <data name="sammy-man-trades-profitable-stocks" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sammy-man-trades-profitable-stocks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="request_money_60px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\request_money_60px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="business-3d-businessman-is-not-satisfied-with-bad-work-and-showing-a-thumb-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\business-3d-businessman-is-not-satisfied-with-bad-work-and-showing-a-thumb-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="account_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\account_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,14 +187,8 @@
   <data name="3d-flame-red-and-white-wall-calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3d-flame-red-and-white-wall-calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="306221906_1275590076548197_9172821168864067944_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\306221906_1275590076548197_9172821168864067944_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="transaction_list_80px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\transaction_list_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="business-3d-businessman-is-not-satisfied-with-bad-work-and-showing-a-thumb-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\business-3d-businessman-is-not-satisfied-with-bad-work-and-showing-a-thumb-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coolHue-FD6585-0D25B9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coolHue-FD6585-0D25B9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +202,9 @@
   <data name="today_80px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\today_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="history1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\history1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="add_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,10 +214,10 @@
   <data name="coolHue-F05F57-360940" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coolHue-F05F57-360940.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="306221906_1275590076548197_9172821168864067944_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\306221906_1275590076548197_9172821168864067944_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="export_pdf_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\export_pdf_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Order History_40px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Order History_40px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

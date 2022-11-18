@@ -163,7 +163,6 @@
             this.dtable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtable.Size = new System.Drawing.Size(657, 602);
             this.dtable.TabIndex = 40;
-            this.dtable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtable_CellContentClick);
             this.dtable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtable_CellDoubleClick);
             // 
             // btn_clear
@@ -392,8 +391,7 @@
             this.txt_contact.Name = "txt_contact";
             this.txt_contact.Size = new System.Drawing.Size(390, 27);
             this.txt_contact.TabIndex = 6;
-            this.txt_contact.TextChanged += new System.EventHandler(this.txt_contact_TextChanged);
-            this.txt_contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_contact_KeyPress);
+           this.txt_contact.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_contact_KeyPress);
             // 
             // txt_bday
             // 

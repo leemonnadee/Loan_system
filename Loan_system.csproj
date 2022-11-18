@@ -26,7 +26,7 @@
     <ProductName>3RCJ Lending Corp.</ProductName>
     <PublisherName>Roy Belleza</PublisherName>
     <MinimumRequiredVersion>1.0.0.10</MinimumRequiredVersion>
-    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationRevision>16</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -94,7 +94,7 @@
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\images\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\Desktop\important files\images\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="Renci.SshNet, Version=2020.0.2.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>packages\SSH.NET.2020.0.2\lib\net40\Renci.SshNet.dll</HintPath>
@@ -374,6 +374,9 @@
   <ItemGroup>
     <None Include="Resources\export_pdf_25px.png" />
     <Content Include="money.ico" />
+    <None Include="Resources\transaction_list_40px.png" />
+    <None Include="Resources\history1.png" />
+    <None Include="Resources\Order History_40px.png" />
     <Content Include="taxi-891.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
